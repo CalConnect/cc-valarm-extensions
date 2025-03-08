@@ -1,0 +1,51 @@
+[[uid]]
+== Alarm Unique Identifier
+
+This extension adds a "UID" property to "VALARM" components to allow a unique
+identifier to specified. The value of this property can then be used to refer
+uniquely to the "VALARM" component.
+
+The "UID" property defined here follows the definition in
+<<RFC5545,section=3.8.4.7>> with the security and privacy updates in
+<<RFC7986,section=5.3>>. In particular it MUST be a globally unique identifier that
+does not contain any security- or privacy-sensitive information.
+
+The "VALARM" component defined in <<syntax>> is extended here as:
+
+[source%unnumbered]
+----
+alarmprop  /= *(
+
+              ; the following is OPTIONAL,
+              ; but MUST NOT occur more than once
+
+              uid
+
+              )
+----
+
+== Alarm Related To
+
+It is often convenient to relate one or more "VALARM" components to other "VALARM"
+components (e.g., see <<snooze>>). This can be accomplished if the "VALARM"
+components each have their own "UID" property (as per <<uid>>).
+
+This specification updates the usage of the "RELATED-TO" property defined in
+<<RFC5545,section=3.8.4.5>> to enable its use with "VALARM" components. Specific
+types of relationships between "VALARM" components can be identified by registering
+new values for the "RELTYPE" property parameter defined in
+<<RFC5545,section=3.2.15>>.
+
+The "VALARM" component defined in <<syntax>> is extended here as:
+
+[source%unnumbered,abnf]
+----
+alarmprop  /= *(
+
+              ; the following is OPTIONAL,
+              ; but MAY occur more than once
+
+              related
+
+              )
+----

@@ -1,0 +1,105 @@
+[appendix]
+== metanorma-extension
+
+=== document history
+
+[source,yaml]
+----
+- date:
+  - type: updated
+  edition: ietf-01
+  amend:
+    - description: |
+        Reintroduced the `RELATED-TO` property for ``VALARM``s and the `SNOOZE` value for the `RELTYPE` property parameter.
+
+        Add Privacy Considerations section.
+- date:
+  - type: updated
+  edition: ietf-00
+  amend:
+    - description: Submitted as `CALEXT` draft.
+- date:
+  - type: updated
+  edition: daboo-05
+  amend:
+    - description: |
+        Added Murchison as editor.
+
+        Updated keywords boilerplate.
+
+        Added reference to UID security/privacy recommendations.
+
+        Removed default alarms.
+
+        Removed `ALARM-AGENT` property.
+
+        Added text about using `TRIGGER` value in the past in addition to `ACTION:NONE` to have a default alarm be ignored.
+
+        Removed text about related alarms.
+
+        Removed URL alarm action.
+
+        Added reference to draft-ietf-calext-eventpub-extensions for `STRUCTURED-LOCATION`.
+
+        Added `CONNECT` and `DISCONNECT PROXIMITY` property values.
+
+        Added Security Considerations.
+
+        Editorial fixes.
+- date:
+  - type: updated
+  edition: daboo-04
+  amend:
+    - description: |
+        Changed "`ID`" to "`AGENT-ID`".
+
+        Add more text on using "`ACKNOWLEDGED`" property.
+
+        Add "`RELATED-TO`" as a valid property for ``VALARM``s.
+
+        Add "`SNOOZE`" relationship type for use with ``VALARM``s.
+
+        State that "`TRIGGER`" is typically ignored in proximity alarms.
+
+        Added "`PROXIMITY`" value registry.
+
+        Added a lot more detail on default alarms including new action and property.
+- date:
+  - type: updated
+  edition: daboo-03
+  amend:
+    - description: |
+        none - resubmission of -02
+- date:
+  - type: updated
+  edition: daboo-02
+  amend:
+    - description: |
+        Updated to 5545 reference.
+
+        Clarified use of absolute trigger in UTC in snooze alarms
+
+        Snooze alarms should be removed when completed
+
+        Removed status and replaced last-triggered by acknowledged property
+
+        Added location-based trigger
+
+        IANA registry tables added
+- date:
+  - type: updated
+  edition: daboo-01
+  amend:
+    - description: |
+        Removed `DESCRIPTION` as an allowed property in the URI alarm.
+
+        Added statement about what to do when `ALARM-AGENT` is not present.
+
+        Allow multiple `ALARM-AGENT` properties to be present.
+
+        Removed `SNOOZE-UNTIL` - snoozing now accomplished by creating a new `VALARM`.
+
+        Remove `VALARM` by reference section.
+
+        Added more detail to CalDAV default alarms.
+----

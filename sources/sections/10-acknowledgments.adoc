@@ -1,0 +1,6 @@
+[acknowledgments]
+== Acknowledgments
+
+This specification came about via discussions at the Calendaring and Scheduling
+Consortium. Also, thanks to the following for providing feedback: Bernard
+Desruisseaux, Mike Douglass, Jacob Farkas, Jeffrey Harris, and Ciny Joy.

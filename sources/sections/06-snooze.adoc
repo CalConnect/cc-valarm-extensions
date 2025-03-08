@@ -1,0 +1,31 @@
+[[snooze]]
+== Snoozing Alarms
+
+Users often want to "snooze" an alarm, and this specification defines a standard
+approach to accomplish that.
+
+To "snooze" an alarm, clients create a new "VALARM" component within the parent
+component of the "VALARM" that was triggered and is being "snoozed" (i.e., as a
+"sibling" component of the "VALARM" being snoozed). The new "VALARM" MUST be set to
+trigger at the user's chosen "snooze" interval after the original alarm triggered.
+Clients SHOULD use an absolute "TRIGGER" property with a "DATE-TIME" value specified
+in UTC.
+
+Clients SHOULD add a "RELATED-TO" property to the new "VALARM" component with a
+value set to the "UID" property value of the "VALARM" component being snoozed. If
+the "VALARM" component being snoozed does not already have a "UID" property, the
+client SHOULD add one. The "RELATED-TO" property added to the new "VALARM" component
+SHOULD include a "RELTYPE" property parameter with a value set to "SNOOZE".
+
+When the "snooze" alarm is triggered and dismissed the client SHOULD remove the
+corresponding "VALARM" component, or set the "ACKNOWLEDGED" property (see
+<<ACKNOWLEDGED>>). Alternatively, if the "snooze" alarm is itself "snoozed", the
+client SHOULD remove the original "snooze" alarm and create a new one, with the
+appropriate trigger time and relationship set.
+
+[[SNOOZE-PARAM]]
+=== Relationship Type Property Parameter
+
+This specification adds the "SNOOZE" relationship type for use with the "RELTYPE"
+property defined in <<RFC5545,section=3.2.15>>. This is used to relate a "snoozed"
+"VALARM" component to the original alarm that the "snooze" was generated for.

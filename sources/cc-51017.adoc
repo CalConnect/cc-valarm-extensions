@@ -1,0 +1,51 @@
+= VALARM Extensions for iCalendar
+:docnumber: 51017
+:copyright-year: 2024
+:language: en
+:doctype: standard
+:edition: 1
+:status: working-draft
+:copyright-year: 2024-07-23
+:revdate: 2024-07-23
+:fullname: Cyrus Daboo
+:surname: Daboo
+:givenname: Cyrus
+:affiliation: Apple Inc.
+:fullname_2: Kenneth Murchison
+:surname_2: Murchison
+:givenname_2: Kenneth
+:affiliation_2: FastMail US LLC
+:language: en
+:technical-committee: CALENDAR
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+include::sections/00-abstract.adoc[]
+
+include::sections/01-intro.adoc[]
+
+include::sections/01-scope.adoc[]
+
+include::sections/02-norm-refs.adoc[]
+
+include::sections/03-terms.adoc[]
+
+include::sections/03-syntax.adoc[]
+
+include::sections/04-uid.adoc[]
+
+include::sections/05-acknowledged-prop.adoc[]
+
+include::sections/06-snooze.adoc[]
+
+include::sections/07-proximity.adoc[]
+
+include::sections/08-security.adoc[]
+
+include::sections/09-iana.adoc[]
+
+include::sections/10-acknowledgments.adoc[]
+
+include::sections/99-bibliography.adoc[]
