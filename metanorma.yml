@@ -2,10 +2,9 @@
 metanorma:
   source:
     files:
-      - sources/cc-51008/document.adoc
-      - sources/ietf/document.adoc
-      - sources/iso-51008/document.adoc
+      - sources/cc-51017.adoc
+      - sources/draft-ietf-calext-valarm-extensions.adoc
 
   collection:
-    name: vObject and vFormat
+    name: VALARM Extensions for iCalendar
     organization: CalConnect

@@ -1,0 +1,38 @@
+== IANA Considerations
+
+=== Property Registrations
+
+This document defines the following new iCalendar properties to be added to the
+registry defined in <<RFC5545,section=8.2.3>>:
+
+[cols="3,1,2",options="header"]
+|===
+|Property |Status |Reference
+|ACKNOWLEDGED |Current |RFCXXXX, <<ACKNOWLEDGED>>
+|PROXIMITY |Current |RFCXXXX, <<PROXIMITY>>
+|===
+
+=== Relationship Types Registry
+
+This document defines the following new iCalendar relationship type to be added to
+the registry defined in <<RFC5545,section=8.3.8>>:
+
+[cols="3,1,2",options="header"]
+|===
+|Relationship Type |Status |Reference
+|SNOOZE |Current |RFCXXXX, <<SNOOZE-PARAM>>
+|===
+
+=== Proximity Value Registry
+
+This document creates a new iCalendar registry for values of the "PROXIMITY"
+property:
+
+[cols="3,1,2",options="header"]
+|===
+|Value |Status |Reference
+|ARRIVE |Current |RFCXXXX, <<PROXIMITY>>
+|DEPART |Current |RFCXXXX, <<PROXIMITY>>
+|CONNECT |Current |RFCXXXX, <<PROXIMITY>>
+|DISCONNECT |Current |RFCXXXX, <<PROXIMITY>>
+|===

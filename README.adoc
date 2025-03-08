@@ -1,22 +1,21 @@
-= CalConnect Standard: (TITLE)
+= CalConnect Standard: VALARM Extensions for iCalendar
 
-This work item belongs to CalConnect (TCs).
+This work item belongs to CalConnect TC CALENDAR.
 
 image:https://github.com/CalConnect/cc-valarm-extensions/workflows/generate/badge.svg["Build Status", link="https://github.com/CalConnect/cc-valarm-extensions/actions?workflow=generate"]
 
 This document is available in its rendered forms here:
 
-* https://calconnect.github.io/cc-valarm-extensions/[CalConnect: Calendaring and scheduling -- Vocabulary (HTML)]
+* https://calconnect.github.io/cc-valarm-extensions/[CalConnect: VALARM Extensions for iCalendar (HTML)]
 
 == General
 
-This document specifies the (TITLE).
+This document specifies the VALARM Extensions for iCalendar.
 
 The document is published as the following:
 
-* CalConnect CC (DOCNUMBER)
-* ISO (DOCNUMBER)
-* IETF draft-cc-valarm-extensions
+* CalConnect CC 51017
+* IETF draft-ietf-calext-valarm-extensions
 
 
 == Fetching the document
@@ -62,17 +61,6 @@ The generated documents are accessible under `_site/`.
 metanorma site generate --agree-to-terms
 open _site/index.html
 ----
-
-
-// == IETF: Checking against idnits
-
-// https://tools.ietf.org/tools/idnits/[idnits] is the RFC checking tool prior to
-// submissions.
-
-// [source,sh]
-// ----
-// idnits draft-calconnect-vobject-vformat.nits
-// ----
 
 
 == License

@@ -1,0 +1,10 @@
+[bibliography]
+== Normative references
+
+* [[[RFC2119,IETF RFC 2119]]]
+* [[[RFC4791,IETF RFC 4791]]]
+* [[[RFC5545,IETF RFC 5545]]]
+* [[[RFC5870,IETF RFC 5870]]]
+* [[[RFC7986,IETF RFC 7986]]]
+* [[[RFC8174,IETF RFC 8174]]]
+* [[[I-D.ietf-calext-eventpub-extensions,IETF I-D ietf-calext-eventpub-extensions]]]

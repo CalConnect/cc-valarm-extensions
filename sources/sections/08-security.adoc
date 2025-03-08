@@ -1,0 +1,23 @@
+== Security Considerations
+
+VALARMs, if not monitored properly, can be used to "spam" users and/or leak personal
+information. For instance, an unwanted audio or display alert could be considered
+spam. Or an email alert could be used to leak a user's location to a third party or to
+send unsolicited email to multiple users. Therefore, CalDAV clients and servers that
+accept iCalendar data from a third party (e.g. via <<RFC5546,iTIP>>, a subscription feed,
+or a shared calendar) SHOULD remove all VALARMs from the data prior to storing in
+their calendar system.
+
+== Privacy Considerations
+
+Proximity VALARMs, if not used carefully, can leak a user's past, present, or future
+location. For instance, storing an iCalendar resource containing proxmity VALARMs to a
+shared calendar on CalDAV server can expose to anyone that has access to that calendar
+the user's intent to leave from or arrive at a particular location at some future
+time. Furthermore, if a CalDAV client updates the shared iCalendar resource with an
+ACKNOWLEDGED property when the alarm is triggered, will leak the exact date and time
+that the user left from or arrived at the location.
+
+Therefore, CalDAV clients that implement proximity alarms SHOULD give users the option
+of storing and/or acknowledging the alarms on the local device only and not storing
+the alarm and/or acknowledgment on a remote server.

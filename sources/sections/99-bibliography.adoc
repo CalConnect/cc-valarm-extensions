@@ -1,0 +1,5 @@
+[bibliography]
+== Bibliography
+
+* [[[RFC5546,IETF RFC 5546]]]
+* [[[BTcore,BTcore]]], Bluetooth Special Interest Group, "Bluetooth Core Specification Version 5.0", December 2016, https://www.bluetooth.com/specifications/bluetooth-core-specification
