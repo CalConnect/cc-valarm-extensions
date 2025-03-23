@@ -1,23 +1,25 @@
 == Introduction
 
-The iCalendar <<RFC5545>> specification defines a set of components used to describe calendar
-data. One of those is the "VALARM" component which appears as a sub-component of
-"VEVENT" and "VTODO" components. The "VALARM" component is used to specify a reminder
-for an event or task. Different alarm actions are possible, as are different ways to
-specify how the alarm is triggered.
+The iCalendar <<RFC5545>> specification defines a set of components used to
+describe calendar data. One of those is the "VALARM" component which appears as
+a sub-component of "VEVENT" and "VTODO" components. The "VALARM" component is
+used to specify a reminder for an event or task. Different alarm actions are
+possible, as are different ways to specify how the alarm is triggered.
 
-As iCalendar has become more widely used and as client-server protocols such as CalDAV <<RFC4791>>
-have become more popular, several issues with "VALARM" components have arisen. Most of
-these relate to the need to extend the existing "VALARM" component with new properties
-and behaviors to allow clients and servers to accomplish specific tasks in an
-interoperable manner. For example, clients typically need a way to specify that an
-alarm has been dismissed by a calendar user, or has been "snoozed" by a set amount of
-time. To date, this has been done through the use of custom "X-" properties specific
-to each client implementation, leading to poor interoperability.
+As iCalendar has become more widely used and as client-server protocols such as
+CalDAV <<RFC4791>> have become more popular, several issues with "VALARM"
+components have arisen. Most of these relate to the need to extend the existing
+"VALARM" component with new properties and behaviors to allow clients and
+servers to accomplish specific tasks in an interoperable manner. For example,
+clients typically need a way to specify that an alarm has been dismissed by a
+calendar user, or has been "snoozed" by a set amount of time. To date, this has
+been done through the use of custom "X-" properties specific to each client
+implementation, leading to poor interoperability.
 
-This specification defines a set of extensions to "VALARM" components to cover common
-requirements for alarms not currently addressed in iCalendar. Each extension is
-defined in a separate section below. For the most part, each extension can be
-supported independently of the others, though in some cases one extension will require
-another. In addition, this specification describes mechanisms by which clients can
-interoperably implement common features such as "snoozing".
+This specification defines a set of extensions to "VALARM" components to cover
+common requirements for alarms not currently addressed in iCalendar. Each
+extension is defined in a separate section below. For the most part, each
+extension can be supported independently of the others, though in some cases one
+extension will require another. In addition, this specification describes
+mechanisms by which clients can interoperably implement common features such as
+"snoozing".

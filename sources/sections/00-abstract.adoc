@@ -1,5 +1,5 @@
 [abstract]
 == Abstract
 
-This document defines a set of extensions to the iCalendar VALARM component to enhance
-use of alarms and improve interoperability between clients and servers.
+This document defines a set of extensions to the iCalendar VALARM component to
+enhance use of alarms and improve interoperability between clients and servers.

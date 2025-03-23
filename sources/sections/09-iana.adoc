@@ -14,8 +14,8 @@ registry defined in <<RFC5545,section=8.2.3>>:
 
 === Relationship Types Registry
 
-This document defines the following new iCalendar relationship type to be added to
-the registry defined in <<RFC5545,section=8.3.8>>:
+This document defines the following new iCalendar relationship type to be added
+to the registry defined in <<RFC5545,section=8.3.8>>:
 
 [cols="3,1,2",options="header"]
 |===
