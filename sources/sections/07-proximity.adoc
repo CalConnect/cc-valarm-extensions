@@ -1,17 +1,18 @@
 == Alarm Proximity Trigger
 
 VALARMs are currently triggered when a specific date-time is reached. It is also
-desirable to be able to trigger alarms based on location, e.g. when arriving at or
-departing from a particular location.
+desirable to be able to trigger alarms based on location, e.g. when arriving at
+or departing from a particular location.
 
-This specification adds the following properties to "VALARM" components to indicate
-when an alarm can be triggered based on location.
+This specification adds the following properties to "VALARM" components to
+indicate when an alarm can be triggered based on location.
 
 * "PROXIMITY" - indicates that a location based trigger is to be used and which
 direction of motion is used for the trigger
+
 * "STRUCTURED-LOCATION" - used to indicate the actual location to trigger off,
-specified using a geo: URI <<RFC5870>> which allows for two or three coordinate values with an
-optional uncertainty
+specified using a geo: URI <<RFC5870>> which allows for two or three coordinate
+values with an optional uncertainty
 
 [source%unnumbered]
 ----
@@ -32,11 +33,11 @@ alarmprop       /= *(
 ----
 
 Typically, when a "PROXIMITY" property is used there is no need to specify a
-time-based trigger using the "TRIGGER" property. However, since "TRIGGER" is defined
-as a required property for a "VALARM" component, for backwards compatibility it has
-to be present, but ignored. To indicate a "TRIGGER" that is to be ignored, clients
-SHOULD use a value a long time in the past. A value of "19760401T005545Z" has been
-commonly used for this purpose.
+time-based trigger using the "TRIGGER" property. However, since "TRIGGER" is
+defined as a required property for a "VALARM" component, for backwards
+compatibility it has to be present, but ignored. To indicate a "TRIGGER" that is
+to be ignored, clients SHOULD use a value a long time in the past. A value of
+"19760401T005545Z" has been commonly used for this purpose.
 
 [[PROXIMITY]]
 === Proximity Property
@@ -48,24 +49,26 @@ alarm.
 
 Value Type:: TEXT
 
-Property Parameters:: IANA and non-standard property parameters can be specified on
-this property.
+Property Parameters:: IANA and non-standard property parameters can be specified
+on this property.
 
-Conformance:: This property can be specified within "VALARM" calendar components.
+Conformance:: This property can be specified within "VALARM" calendar
+components.
 
-Description:: This property is used to indicate that an alarm has a location-based
-trigger. Its value identifies the direction of motion used to trigger the alarm. One
-or more location values are set using "STRUCTURED-LOCATION" properties.
+Description:: This property is used to indicate that an alarm has a
+location-based trigger. Its value identifies the direction of motion used to
+trigger the alarm. One or more location values are set using
+"STRUCTURED-LOCATION" properties.
 +
-When the property value is set to "ARRIVE", the alarm is triggered when the calendar
-user agent arrives in the vicinity of any of the specified locations. When set to
-"DEPART", the alarm is triggered when the calendar user agent departs from the
-vicinity of any specified locations.
+When the property value is set to "ARRIVE", the alarm is triggered when the
+calendar user agent arrives in the vicinity of any of the specified locations.
+When set to "DEPART", the alarm is triggered when the calendar user agent
+departs from the vicinity of any specified locations.
 +
 When the property value is set to "CONNECT", the alarm is triggered when the
-calendar user agent connects to a <<BTcore,Bluetooth(R)>>-enabled automobile. When set to
-"DISCONNECT", the alarm is triggered when the calendar user agent disconnects from a
-Bluetooth(R)-enabled automobile.
+calendar user agent connects to a <<BTcore,Bluetooth(R)>>-enabled automobile.
+When set to "DISCONNECT", the alarm is triggered when the calendar user agent
+disconnects from a Bluetooth(R)-enabled automobile.
 
 Format Definition:: This property is defined by the following notation:
 +
@@ -81,7 +84,7 @@ proximityparam  = *(
                   (";" other-param)
 
                   )
-                
+
 proximityvalue  = "ARRIVE" / "DEPART" /
                   "CONNECT" / "DISCONNECT" / iana-token / x-name
 ----
@@ -96,9 +99,9 @@ PROXIMITY:ARRIVE
 === Example
 
 The following example shows a "VALARM" component with a proximity trigger set to
-trigger when the device running the calendar user agent leaves the vicinity defined
-by the structured location property. Note use of the "u=" parameter with the "geo"
-URI to define the precision of the location determination.
+trigger when the device running the calendar user agent leaves the vicinity
+defined by the structured location property. Note use of the "u=" parameter with
+the "geo" URI to define the precision of the location determination.
 
 [source%unnumbered,abnf]
 ----
